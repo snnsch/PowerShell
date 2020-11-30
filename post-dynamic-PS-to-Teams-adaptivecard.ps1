@@ -5,7 +5,7 @@ $connectorUri = 'https://outlook.office.com/webhook/8aba3d8f-7014-469e-96be-a3a8
 Connect-PnPOnline –Url $adminURL –Credentials (Get-Credential)
 
 # replace with dynamic content
-$content = @('Anna Weninger','René Fritsch','Babsi Weninger','Elliott Schmietz')
+$content = @('Anna Weninger','Other Person1','Other Person2','Elliott Schmietz')
 
 # temp variable to build json for Teams 
 $usertextstring = ''
