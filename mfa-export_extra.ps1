@@ -1,6 +1,8 @@
 # PRECONDITIONS
 ### Install-Module MSOnline 
 ### Connect-MsolService
+### Install-Module AzureAD
+### Connect-AzureAD
 
 # MAIN
 
@@ -62,4 +64,4 @@ $mfamethod = @{
 # Execute the entire query with all variables and export to CSV
 # CSV export file nomenclature: <tenant-displayname>_"MFA-Export"_yyyyMMdd_HHmmss.csv
 
-Get-MsolUser -all | select UserPrincipalName, $mfamethod, $mfa_details_phone, $mfa_details_mail | Export-Csv "Tenant-$((Get-AzureADTenantDetail).DisplayName)_MFA-Export_$((Get-Date).ToString("yyyyMMdd_HHmmss")).csv"
+Get-MsolUser -all | select UserPrincipalName, $mfamethod, $mfa_details_phone, $mfa_details_mail | Export-Csv -Path .\Desktop\"Tenant-$((Get-AzureADTenantDetail).DisplayName)_MFA-Export_$((Get-Date).ToString("yyyyMMdd_HHmmss")).csv"
