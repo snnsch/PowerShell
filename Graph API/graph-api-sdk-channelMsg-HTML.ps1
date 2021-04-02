@@ -1,6 +1,13 @@
 # NOTES FOR BLOG ARTICLES:
 # a) V1 of this script (retrieve via GitHub) is very useful as a first article, V2 (30 Mar) as second one
-# Concept for articles: (a) connecting to GraphAPI via PowerShell SDK, (b) debugging values using Graph Explorer, (c) posting for a fixed user, (d) Team and channel without mention, (5) posting with random team and channel, (6) creating mention, (7) styling output
+# Concept for articles: 
+# (a) connecting to GraphAPI via PowerShell SDK, 
+# (b) debugging values using Graph Explorer, 
+# (c) posting for a fixed user, 
+# (d) Team and channel without mention, 
+# (5) posting with random team and channel, 
+# (6) creating mention, 
+# (7) styling output
 
 
 # NOTES: 
@@ -8,7 +15,7 @@
     # Very cool but not production-ready yet => follow updates in documentation, e.g.: https://github.com/microsoftgraph/msgraph-sdk-powershell/tree/dev/samples
 
 # (1) Set permissions for following actions => this would normally need to be done in Azure => VERY CONVENIENT (check needed permissions in Graph Explorer)
-# Connect-MgGraph -Scopes "User.Read.All","Group.ReadWrite.All"
+Connect-MgGraph -Scopes "User.Read.All","Group.ReadWrite.All"
 
 # (2) Get specific user and id
 $ENTER_USER = 'anna-admin@M365x425026.onmicrosoft.com'
